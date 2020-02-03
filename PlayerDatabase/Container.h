@@ -8,7 +8,7 @@ public:
 
 	void save();
 	void addPlayer(char* newName, int newScore);
-	void load();
+	bool load();
 	void optionSelection();
 	void showScores();
 

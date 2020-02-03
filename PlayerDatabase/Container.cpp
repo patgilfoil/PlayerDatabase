@@ -59,3 +59,15 @@ void Container::save() {
 	oStr.flush();
 	oStr.close();
 }
+
+bool Container::load() {
+	std::ifstream iStr;
+
+	iStr.open("save.txt");
+
+	if (!iStr.is_open())
+		return false;
+
+	iStr.read((char*)dataSize, sizeof(int));
+	//my brain is fried up, need to get back to this later
+}
