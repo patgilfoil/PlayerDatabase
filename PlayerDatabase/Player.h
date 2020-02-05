@@ -1,4 +1,8 @@
 #pragma once
+#include <fstream>
+
+class Container;
+
 class Player
 {
 public:
@@ -8,8 +12,11 @@ public:
 
 	char* getName() { return name; }
 	int getScore() { return score; }
-	char* setName(char* pName);
-	int setScore(int pScore) { score = pScore; }
+	void setName(char* pName);
+	void setScore(int pScore) { score = pScore; }
+	void save(std::ofstream& o);
+	bool load(std::ifstream& i);
+	void addPlayer();
 
 private:
 	char name[30];

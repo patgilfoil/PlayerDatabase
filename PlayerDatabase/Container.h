@@ -7,13 +7,13 @@ public:
 	~Container();
 
 	void save();
-	void addPlayer(char* newName, int newScore);
 	bool load();
-	void optionSelection();
-	void showScores();
+	void optionSelection(bool active);
+	void add(Player player);
+	void sort();
 
 private:
 	int dataSize = 0;
-	Player* playerList[0];
+	Player* playerList = new Player[dataSize];
 };
 
