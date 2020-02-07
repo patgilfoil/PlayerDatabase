@@ -54,7 +54,7 @@ void Container::optionSelection(bool active) {
 void Container::save() {
 	std::ofstream oStr;
 
-	oStr.open("save.txt", std::ios::out);
+	oStr.open("save.dat", std::ofstream::out | std::ofstream::out | std::ofstream::binary);
 
 	if (oStr.is_open()) {
 		oStr.write((char*)&dataSize, sizeof(int));
@@ -87,7 +87,7 @@ void Container::sort() {
 bool Container::load() {
 	std::ifstream iStr;
 
-	iStr.open("save.txt", std::ios::in);
+	iStr.open("save.dat", std::ifstream::in | std::ifstream::binary);
 
 	if (!iStr.is_open())
 		return false;
