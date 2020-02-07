@@ -10,6 +10,7 @@ public:
 	bool load();
 	void optionSelection(bool active);
 	void add(Player player);
+	void updatePlayer();
 	void sort();
 
 private:
