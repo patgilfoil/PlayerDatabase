@@ -20,8 +20,8 @@ Player::~Player()
 }
 
 //set the name of the player to the one that's being input through the function
-void Player::setName(char newName[30]) {
-	strcpy_s(name, 30, newName);
+void Player::setName(char pName[30]) {
+	strcpy_s(name, 30, pName);
 }
 
 //player creation sequence

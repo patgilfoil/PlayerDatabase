@@ -21,8 +21,7 @@ void Container::optionSelection(bool active) {
 		std::cout << "2. Add new Profile" << std::endl;
 		std::cout << "3. Update Profile Score" << std::endl;
 		std::cout << "4. Save All Profiles" << std::endl;
-		std::cout << "5. Load All Profiles" << std::endl;
-		std::cout << "6. Quit the Program" << std::endl;
+		std::cout << "5. Quit the Program" << std::endl;
 		
 		//clear cin input
 		std::cin.clear();
@@ -51,14 +50,11 @@ void Container::optionSelection(bool active) {
 		if (option == '3') {
 			updatePlayer();
 		}
-		if (option == '4') {
+ 		if (option == '4') {
 			save();
 			std::cout << "Player scores have been saved" << std::endl;
 		}
 		if (option == '5') {
-			load();
-		}
-		if (option == '6') {
 			//set active to false and end the loop
 			active = false;
 		}
@@ -120,9 +116,10 @@ void Container::updatePlayer() {
 			startIndex = pivot + 1;
 		}
 		//if the pivot is incorrect to the search term, larger value than term
-		else if (strcmp(searchTerm, playerList[pivot].getName()) > 0)
+		else if (strcmp(searchTerm, playerList[pivot].getName()) > 0) {
 			//move the ending index close to the pivot's location
 			endIndex = pivot - 1;
+		}
 	}
 }
 
