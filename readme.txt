@@ -12,5 +12,3 @@ If it finds a profile with the associated name, the program will ask you to ente
 If a profile is not found under the search terms, it will take you back to the main menu.
 The fourth option, will load any scores on the save file if it has been modified in any way.
 To close the program, just select the fifth option from the main menu.
-
-Github link: https://github.com/patgilfoil/PlayerDatabase
